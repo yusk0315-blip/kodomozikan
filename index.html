@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>子どもとの関わり 残り回数・時間メーター</title>
@@ -441,5 +444,11 @@
 
     init();
   </script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
+  }
+</script>
+
 </body>
 </html>
